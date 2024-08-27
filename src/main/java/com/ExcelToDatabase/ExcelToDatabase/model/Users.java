@@ -21,4 +21,10 @@ public class Users {
 
     private String userName;
     private String emailId;
+
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private UserDetails userDetails;
+
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private UserAddress userAddress;
 }
